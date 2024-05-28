@@ -1,0 +1,388 @@
+<html>
+<title>Travels</title>
+
+<body>
+    <style>
+        .container {
+            position: relative;
+            width: 1700px;
+            margin: auto;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 50%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: rgb(0, 6, 10);
+        }
+
+        .button {
+            height: 30px;
+            width: 100px;
+            display: block;
+            padding: 10px 20px;
+            background-color: #be0452;
+            color: white;
+            text-decoration: none;
+            margin: 5px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #3f011b;
+        }
+
+        .project {
+            display: inline-block;
+            vertical-align: top;
+            margin: 30px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .buttonp {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #022b04;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 150px;
+            margin-left: 150px;
+
+        }
+
+        .buttonp:hover {
+            background-color: #10ce1a;
+        }
+
+        .containerT {
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 50%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #3e0599;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #11002c;
+        }
+
+        #contact-details {
+            display: none;
+        }
+
+        .buttonc {
+            width: 100px;
+            height: 60px;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            padding-right: 10px;
+            background-color: #103d02;
+            border-radius: 5px;
+            border: none;
+            margin-left: 8px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px #0b2503;
+            transition: box-shadow 0.3s,
+                transform 0.3s;
+
+        }
+
+        .button:active {
+            box-shadow: 0 2px #451d66;
+            transform: translateY(4px);
+        }
+
+        .footer {
+            background-color: #3a3b3a;
+            color: white;
+            padding: -0.1px;
+            height: 200px;
+
+        }
+    </style>
+
+    <div class="container">
+
+        <img src="travel.jpg" style="width: 1700px; height: 600px;">
+
+        <div class="text">
+            <h1>WELCOME TO HAPPY JOURNEY TRAVELS</h1>
+        </div>
+
+        <div class="buttons">
+            <a href="#" class="button">Home</a>
+            <a href="#" class="button">About</a>
+            <a href="#" class="button">Book</a>
+            <a href="#" class="button">Contact</a>
+        </div>
+    </div>
+
+    <h2>ABOUT US</h2>
+    <h3 style="text-indent: 30px;">Welcome to HAPPY JOURNEY TRAVELS! We are dedicated to making your
+        travel experience seamless, memorable, and hassle-free. With years of expertise in the travel industry, we
+        specialize in providing personalized travel solutions tailored to your preferences and budget. Whether you're
+        planning a relaxing beach getaway, an adventurous trekking expedition, or a business trip, our team of
+        experienced professionals is here to assist you every step of the way. From booking flights, accommodations, and
+        transportation to arranging sightseeing tours and activities, we strive to exceed your expectations and turn
+        your travel dreams into reality. At HAPPY JOURNEY TRAVELS, your satisfaction is our top
+        priority, and we look forward to helping you embark on your next unforgettable journey!!!!!</h3><br>
+    <h2>BOOKING SLOT</h2>
+    <div class="project">
+        <img src="train.jpg" style="height:300px;width:450px">
+
+    </div>
+    <div class="project">
+        <img src="bus.jpg" style="height:300px;width:450px">
+
+    </div>
+    <div class="project">
+        <img src="flight.jpg" style="height:300px;width:450px">
+
+    </div>
+    <button class="buttonp" id="book-train">Book Ticket For Train</button>
+    <button class="buttonp" id="book-bus">Book Ticket For Bus</button>
+    <button class="buttonp" id="book-flight">Book Ticket For Flight</button>
+    <div id="train-form" style="display: none;">
+        <h2>Train Ticket Booking</h2>
+        <form action="#" method="post">
+
+
+            <div class="form-group">
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from" required>
+            </div>
+            <div class="form-group">
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date of Journey:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="train">Train Number:</label>
+                <input type="text" id="train" name="train" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Book Ticket">
+            </div>
+        </form>
+    </div>
+    <div id="bus-form" style="display: none;">
+        <h2>Bus Ticket Booking</h2>
+        <form action="#" method="post">
+
+            <div class="form-group">
+                <label for="from"> From:</label>
+                <input type="text" id="from" name="from" required>
+            </div>
+            <div class="form-group">
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to" required>
+            </div>
+            <div class="form-group">
+                <label for="date"><i class="far fa-calendar-alt"></i> Date of Journey:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age"><i class="fas fa-birthday-cake"></i> Age:</label>
+                <input type="number" id="age" name="age" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="gender"><i class="fas fa-venus-mars"></i> Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Book Ticket">
+            </div>
+        </form>
+        <div id="flight-form" style="display: none;">
+            <h2>Flight Ticket Booking</h2>
+            <form action="#" method="post">
+
+                <div class="form-group">
+                    <label for="from"> From:</label>
+                    <input type="text" id="from" name="from" required>
+                </div>
+                <div class="form-group">
+                    <label for="to">To:</label>
+                    <input type="text" id="to" name="to" required>
+                </div>
+                <div class="form-group">
+                    <label for="date"><i class="far fa-calendar-alt"></i> Date of Journey:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="age"><i class="fas fa-birthday-cake"></i> Age:</label>
+                    <input type="number" id="age" name="age" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender"><i class="fas fa-venus-mars"></i> Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Book Ticket">
+                </div>
+            </form>
+        </div>
+        <h2>TERMS & CONDITIONS:</h2>
+        <h3>
+            1. We get information from Service Providers, and we can't guarantee that everything is accurate—but when
+            providing our Platform, we take reasonable care and act with professional diligence. Unless we've failed to
+            do so, or have been negligent, we can't be held responsible for any errors, interruptions, or missing bits
+            of information. Of course, we'll do everything we can to correct/fix them as soon as we become aware of
+            them.</h3>
+
+        <h3> 2. We're always working to improve our customers' experience with Booking.com. So sometimes, we show
+            different people different designs, phrasings, products, etc. to find out how they react. As a result, you
+            might not come across some services or conditions when you visit our Platform.
+        </h3>
+        <h3>3. Our Platform is not a recommendation or endorsement of any Service Provider or its products, services,
+            facilities, vehicles, etc.</h3>
+
+        <h3> 4. We're not a party to the terms between you and the Service Provider. The Service Provider is solely
+            responsible for the Travel Experience.</h3>
+
+        <h3> 5. To make a Booking, you may need to create an Account. Make sure all your info (including payment and
+            contact details) is correct and up to date, or you might not be able to access your Travel Experience(s).
+            You're responsible for anything that happens with your Account, so don't let anyone else use it and keep
+            your username and password secret.</h3>
+
+        <h3> 6. We'll show you the offers that are available to you, in (what we think is) the right language for you.
+            You can change to another language whenever you like.</h3>
+
+        <h3>7. Unless otherwise indicated, you need to be at least 18 to use the Platform.
+        </h3>
+
+    </div>
+    <script>
+        document.getElementById('book-train').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('train-form').style.display = 'block';
+        });
+        document.getElementById('book-bus').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('bus-form').style.display = 'block';
+        });
+        document.getElementById('book-flight').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('flight-form').style.display = 'block';
+        });
+
+    </script>
+    <center>
+        <footer class="footer">
+            <h3>&copy; 2024 by Laxmi created with VS Code</h3>
+            <H3>Follow Us On</H3>
+            <a href="#"><img src="whatsapp.jpg"
+                    style="border-radius:50%;height:50px;width:60px; margin-left: 50px;margin-right: 50px;margin-top: 5px;"></a>
+            <a href="#"> <img src="insta.jpg"
+                    style="border-radius:50%;height:50px;width:60px;margin-left: 5cap;margin-right: 50px;margin-top: 5px;"></a>
+            <a href="https://www.linkedin.com/in/gorli-laxmi-2379272a9/?originalSubdomain=in"> <img src="linkedin.jpg"
+                    style="border-radius:50%;height:50px;width:60px;margin-left: 50px;margin-right: 50px;margin-top: 5px;"></a>
+            <a href="#"> <img src="facebook.jpg"
+                    style="border-radius:50%;height:50px;width:60px;margin-left: 50px;margin-right: 50px;margin-top: 5px;"></a>
+            <a href="#"> <img src="telegram.jpg"
+                    style="border-radius:50%;height:50px;width:60px;margin-left: 50px;margin-right: 50px;margin-top: 5px;"></a>
+        </footer>
+    </center>
+
+</body>
+
+</html>
